@@ -1,4 +1,67 @@
-.hero-image {
-  width: 900px;
-  height: 500px;
+* {
+  /* border: 1px solid #000; */
+}
+
+body {
+  padding-top: 1rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.landing-image {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+
+header nav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+
+}
+
+nav button {
+  background-color: transparent;
+  width: 90px;
+  border: none;
+  border-bottom: 1px solid orangered;
+  color: brown;
+  transform: scale(1.5);
+
+}
+
+div#content h1 {
+  text-align: center;
+  color: orangered;
+  font-size: 4rem;
+  transform: translateY(50px);
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.center-container {
+  display: flex;
+  flex-direction: column;
+  /* background-color: pink; */
+  height: 100vh;
+  justify-content: space-around;
+
+}
+
+.center-container button {
+  transform: scale(2);
+  background-color: orangered;
+  color: white;
+  border: none;
+  height: 22px;
 }
