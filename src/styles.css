@@ -43,6 +43,7 @@ img {
   height: 100%;
 }
 
+/* Home Section */
 .landing-image {
   width: 100vw;
   height: 90%;
@@ -55,7 +56,7 @@ img {
 }
 
 
-body::before {
+img.landing-image::before {
   content: "";
   position: absolute;
   height: 110%;
@@ -65,7 +66,6 @@ body::before {
   bottom: 0;
   background: radial-gradient(circle, transparent, var(--background-color) 50%);
   backdrop-filter: blur(5px);
-
 }
 
 
@@ -120,33 +120,41 @@ div#content h1 {
 }
 
 
+/* About Section */
+
 .about-container {
   display: flex;
-  padding-top: 1rem;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100vh;
+  /* padding-top: 1rem; */
+  justify-content: space-between;
+  /* align-items: center; */
+  /* text-align: center; */
+  height: 80vh;
 
 }
 
 .about-image-container {
   height: 100%;
   width: 100%;
-  position: absolute;
   top: 0;
   z-index: -1;
-}
+  background: radial-gradient(transparent, var(--background-color)63%),
+    url('assets/coffeebag.webp') center/90% no-repeat;
 
+  transform: translateX(100px);
+
+
+}
 
 .about-text-container {
-  line-height: 1.5rem;
-  text-align: center;
+  /* text-align: center; */
   font-size: 1.2rem;
-  backdrop-filter: blur(3px);
-  background-color: #ddd0;
+  flex: 1;
+  transform: translate(150px, 100px);
+  /* font-family: Roboto; */
+  font-size: 2.6rem;
 }
 
+/**/
 .about-text-container p {
-  width: 600px;
+  width: 500px;
 }

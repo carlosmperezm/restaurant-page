@@ -1,4 +1,4 @@
-import imagePath from "./assets/about-image.jpg";
+// import imagePath from "./assets/about-image.jpg";
 // Photo by <a href=""></a> on <a href="">Unsplash</a>
 
 
@@ -12,7 +12,7 @@ export function createAboutPage() {
   imageContainer.classList.add("about-image-container");
 
   const image = document.createElement("img");
-  image.src = imagePath;
+  // image.src = imagePath;
   image.alt = "a man cooking";
   image.classList.add("about-image");
 
@@ -45,8 +45,8 @@ export function createAboutPage() {
   imageContainer.appendChild(image);
   imageContainer.appendChild(shoutout);
 
-  aboutContainer.appendChild(imageContainer);
   aboutContainer.appendChild(textContainer);
+  aboutContainer.appendChild(imageContainer);
 
   contentDiv.appendChild(aboutContainer);
 
