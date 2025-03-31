@@ -1,6 +1,32 @@
+* {
+  --background-color: #221809;
+  --hover-color: #f2c68a;
+  --text-color: #7b4600;
+  --alternative-text-color: ##d9ccb;
+}
+
+@font-face {
+  font-family: 'California Signature';
+  src: url('assets/fonts/california_signature/California\ Signature.woff2') format('woff2'),
+    url('assets/fonts/california_signature/California\ Signature.woff') format('woof');
+}
+
+@font-face {
+  font-family: 'Adelia';
+  src: url('assets/fonts/adelia_3/adelia.woff2') format('woff2'),
+    url('assets/fonts/adelia_3/adelia.ttf') format('ttf');
+}
+
+
 body {
+  font-family: 'California Signature', system-ui;
+  color: var(--text-color);
   padding-top: 1rem;
-  background-color: #f4f3ee;
+  background-color: var(--background-color);
+}
+
+button {
+  font-family: 'Adelia', system-ui;
 }
 
 button:hover {
@@ -33,14 +59,12 @@ nav button {
   width: 90px;
   border: none;
   border-bottom: 1px solid orangered;
-  color: brown;
   transform: scale(1.5);
 
 }
 
 div#content h1 {
   text-align: center;
-  color: orangered;
   font-size: 4rem;
   transform: translateY(50px);
 }
@@ -54,7 +78,6 @@ div#content h1 {
 .center-container {
   display: flex;
   flex-direction: column;
-  /* background-color: pink; */
   height: 100vh;
   justify-content: space-around;
 
@@ -63,7 +86,6 @@ div#content h1 {
 .center-container button {
   transform: scale(2);
   background-color: orangered;
-  color: white;
   border: none;
   height: 22px;
 }
@@ -98,10 +120,7 @@ div#content h1 {
 .about-text-container {
   line-height: 1.5rem;
   text-align: center;
-  color: white;
-  /* font-weight: bold; */
   font-size: 1.2rem;
-  /* transform: translateX(-80px); */
   backdrop-filter: blur(3px);
   background-color: #ddd0;
 }
