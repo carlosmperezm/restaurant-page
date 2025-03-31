@@ -117,34 +117,30 @@ nav button {
 /* About Section */
 .about-container {
   display: grid;
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
   grid-template-columns: 1fr 2fr;
   grid-template-areas:
     "title image "
     "description image "
+    "links links "
   ;
-  max-height: 80vh;
-  grid-auto-rows: 0;
+  padding-left: 1rem;
 
 }
 
 .about-container h1 {
   grid-area: title;
-  background-color: lightblue;
 }
 
 .about-image-container {
   grid-area: image;
-  top: 0;
   background: radial-gradient(transparent, var(--background-color)63%),
     url('assets/coffeebag.webp') center/contain no-repeat;
-  /* transform: translateX(100px); */
-  background-color: Red;
+  height: 100%;
 }
 
 .about-text-container {
   grid-area: description;
-  font-size: 1.2rem;
   font-size: 2.6rem;
-  background-color: pink;
+  margin-top: -50px;
 }
