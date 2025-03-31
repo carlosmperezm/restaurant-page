@@ -43,32 +43,6 @@ img {
   height: 100%;
 }
 
-/* Home Section */
-.landing-image {
-  width: 100vw;
-  height: 90%;
-  position: absolute;
-  top: 100px;
-  z-index: -1;
-  background:
-    url('assets/coffeemugs\ pictute.webp') center/contain no-repeat;
-  background-size: 80vw 100vh;
-}
-
-
-img.landing-image::before {
-  content: "";
-  position: absolute;
-  height: 110%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle, transparent, var(--background-color) 50%);
-  backdrop-filter: blur(5px);
-}
-
-
 header nav {
   display: flex;
   justify-content: space-evenly;
@@ -85,10 +59,20 @@ nav button {
 
 }
 
-div#content h1 {
+/* ******************************************** */
+
+/* Home Section */
+.home-container {
+  width: 100vw;
+  height: 90%;
+  background:
+    url('assets/coffeemugs\ pictute.webp') center/contain no-repeat;
+}
+
+
+.home-container h1 {
   text-align: center;
   font-weight: lighter;
-  transform: translateY(50px);
 }
 
 .button-container {
@@ -100,8 +84,12 @@ div#content h1 {
 .center-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   justify-content: space-around;
+  background: radial-gradient(circle, transparent, var(--background-color) 50%);
+  backdrop-filter: blur(5px);
 
 }
 
@@ -119,42 +107,44 @@ div#content h1 {
   font-size: 0.7rem;
 }
 
+/* ******************************************** */
+
+/* Menu Section */
+
+
+/* ******************************************** */
 
 /* About Section */
-
 .about-container {
-  display: flex;
-  /* padding-top: 1rem; */
-  justify-content: space-between;
-  /* align-items: center; */
-  /* text-align: center; */
-  height: 80vh;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "title image "
+    "description image "
+  ;
+  max-height: 80vh;
+  grid-auto-rows: 0;
 
+}
+
+.about-container h1 {
+  grid-area: title;
+  background-color: lightblue;
 }
 
 .about-image-container {
-  height: 100%;
-  width: 100%;
+  grid-area: image;
   top: 0;
-  z-index: -1;
   background: radial-gradient(transparent, var(--background-color)63%),
-    url('assets/coffeebag.webp') center/90% no-repeat;
-
-  transform: translateX(100px);
-
-
+    url('assets/coffeebag.webp') center/contain no-repeat;
+  /* transform: translateX(100px); */
+  background-color: Red;
 }
 
 .about-text-container {
-  /* text-align: center; */
+  grid-area: description;
   font-size: 1.2rem;
-  flex: 1;
-  transform: translate(150px, 100px);
-  /* font-family: Roboto; */
   font-size: 2.6rem;
-}
-
-/**/
-.about-text-container p {
-  width: 500px;
+  background-color: pink;
 }
