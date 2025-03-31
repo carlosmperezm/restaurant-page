@@ -8,7 +8,7 @@ export function createHomePage() {
   imagenContainer.classList.add("imagen-container");
 
   const image = document.createElement("img");
-  image.src = imagePath;
+  // image.src = imagePath;
   image.alt = "burguers, fries, chicken and salad on plates";
   image.classList.add("landing-image");
 

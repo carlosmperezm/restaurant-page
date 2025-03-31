@@ -1,8 +1,9 @@
 * {
   --background-color: #221809;
   --hover-color: #f2c68a;
-  --text-color: #7b4600;
-  --alternative-text-color: ##d9ccb;
+  /* --text-color: #7b4600; */
+  --text-color: #ab6f33;
+  --alternative-text-color: #EDCC95;
 }
 
 @font-face {
@@ -23,10 +24,14 @@ body {
   color: var(--text-color);
   padding-top: 1rem;
   background-color: var(--background-color);
+  font-size: 4rem;
+  height: 50vh;
 }
 
 button {
-  font-family: 'Adelia', system-ui;
+  font-family: 'California Signature', system-ui;
+  font-size: 3.5rem;
+  color: var(--alternative-text-color);
 }
 
 button:hover {
@@ -40,10 +45,27 @@ img {
 
 .landing-image {
   width: 100vw;
-  height: 100vh;
+  height: 90%;
   position: absolute;
-  top: 0;
+  top: 100px;
   z-index: -1;
+  background:
+    url('assets/coffeemugs\ pictute.webp') center/contain no-repeat;
+  background-size: 80vw 100vh;
+}
+
+
+body::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, transparent, var(--background-color) 50%);
+  backdrop-filter: blur(5px);
+
 }
 
 
@@ -65,7 +87,8 @@ nav button {
 
 div#content h1 {
   text-align: center;
-  font-size: 4rem;
+  font-weight: lighter;
+  /* font-size: 4rem; */
   transform: translateY(50px);
 }
 
