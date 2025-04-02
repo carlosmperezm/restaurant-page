@@ -111,6 +111,37 @@ nav button {
 
 /* Menu Section */
 
+.about-page-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100vw;
+}
+
+.menu-image-container {
+  grid-column: 1;
+  background:
+    linear-gradient(to right, transparent, var(--background-color)),
+    url('assets/Pourover.webp') center/100% 100% no-repeat;
+  margin: 0 0 -10px -10px;
+}
+
+.menu-container {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+
+}
+
+
+.drink {
+  display: flex;
+  justify-content: space-between;
+  font-size: 3rem;
+  padding: 0 3rem;
+}
 
 /* ******************************************** */
 

@@ -1,6 +1,7 @@
 import "./styles.css";
 
 import { createHomePage } from "./homePage";
+import { createMenuPage } from "./menuPage";
 import { createAboutPage } from "./aboutMePage";
 
 
@@ -15,6 +16,11 @@ homeButton.addEventListener("click", () => {
   deleteContent(contentDiv);
   createHomePage();
 });
+
+menuButton.addEventListener("click", () => {
+  deleteContent(contentDiv);
+  createMenuPage();
+})
 
 aboutButton.addEventListener("click", () => {
   deleteContent(contentDiv);
