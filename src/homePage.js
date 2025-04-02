@@ -1,28 +1,13 @@
-import imagePath from "./assets/landing-image.jpg";
 
 export function createHomePage() {
 
   const contentDiv = document.querySelector("div#content");
 
-  const imagenContainer = document.createElement("div");
-  imagenContainer.classList.add("imagen-container");
+  const homeContainer = document.createElement("div");
+  homeContainer.classList.add("home-container");
 
-  const image = document.createElement("img");
-  image.src = imagePath;
-  image.alt = "burguers, fries, chicken and salad on plates";
-  image.classList.add("landing-image");
-
-  const shoutout = document.createElement("p");
-  shoutout.classList.add("shoutout");
-
-  const authorLink = document.createElement("a");
-  authorLink.href = "https://unsplash.com/@mustafabashari?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash";
-  authorLink.textContent = "Mustafa Bashari";
-
-  const siteLink = document.createElement("a");
-  siteLink.href = "https://unsplash.com/photos/fries-and-burger-on-white-ceramic-plate-ZXQ9m5kgO8Y?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash";
-  siteLink.textContent = "Unsplash";
-
+  const imageContainer = document.createElement("div");
+  imageContainer.classList.add("image-container");
 
 
   const centerContainer = document.createElement("div");
@@ -37,23 +22,15 @@ export function createHomePage() {
   const orderButton = document.createElement("button");
   orderButton.textContent = "Order Now";
 
-
-  shoutout.appendChild(authorLink);
-  shoutout.appendChild(document.createTextNode(" on "));
-  shoutout.appendChild(siteLink);
-
-  imagenContainer.appendChild(image);
-  imagenContainer.appendChild(shoutout);
-
-
   buttonContainer.appendChild(orderButton);
 
   centerContainer.appendChild(title);
   centerContainer.appendChild(buttonContainer);
 
-  contentDiv.appendChild(imagenContainer);
-  contentDiv.appendChild(centerContainer);
-  contentDiv.appendChild(shoutout);
+  homeContainer.appendChild(imageContainer);
+  homeContainer.appendChild(centerContainer);
+
+  contentDiv.appendChild(homeContainer)
 
   document.querySelectorAll("a").forEach(a => a.target = "_blank");
 }
