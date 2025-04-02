@@ -11,6 +11,7 @@ const homeButton = document.querySelector("button#home");
 const menuButton = document.querySelector("button#menu");
 const aboutButton = document.querySelector("button#about");
 
+createHomePage();
 
 homeButton.addEventListener("click", () => {
   deleteContent(contentDiv);
