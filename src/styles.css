@@ -1,7 +1,6 @@
 * {
   --background-color: #221809;
   --hover-color: #f2c68a;
-  /* --text-color: #7b4600; */
   --text-color: #ab6f33;
   --alternative-text-color: #EDCC95;
   --off-white: gainsboro;
@@ -43,6 +42,10 @@ img {
   height: 100%;
 }
 
+/* ******************************************** */
+
+/* Header */
+
 header nav {
   display: flex;
   justify-content: space-evenly;
@@ -55,7 +58,6 @@ nav button {
   width: 90px;
   border: none;
   border-left: 1px solid var(--off-white);
-  transform: scale(1.2);
 
 }
 
@@ -123,6 +125,7 @@ nav button {
     linear-gradient(to right, transparent, var(--background-color)),
     url('assets/Pourover.webp') center/100% 100% no-repeat;
   margin: 0 0 -10px -10px;
+  transform: translateY(30px);
 }
 
 .menu-container {
